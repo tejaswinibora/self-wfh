@@ -1,0 +1,343 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Tech World</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#f3f7fc;color:#222;line-height:1.7}
+header{background:#071b35;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:25px;font-weight:bold;color:#35d9ff}
+nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
+nav a:hover{color:#35d9ff}
+.hero{background:linear-gradient(120deg,#071b35,#075b91,#08a4c8);color:white;text-align:center;padding:90px 7%}
+.hero h1{font-size:44px;margin-bottom:15px}
+.hero p{font-size:18px;max-width:750px;margin:auto}
+.btn{background:#08bce5;color:#061b32;padding:11px 22px;border:0;border-radius:6px;font-weight:bold;cursor:pointer;margin-top:15px}
+section{padding:55px 7%}
+.heading{text-align:center;color:#075b91;font-size:30px;margin-bottom:30px}
+.intro{max-width:900px;margin:auto;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:white;padding:25px;border-radius:12px;box-shadow:0 4px 15px #00000015}
+.card h3{color:#075b91;margin-bottom:10px}
+.card p{color:#555}
+.card .btn{margin-top:12px}
+#details{display:none;background:white;margin:35px 7%;padding:30px;border-radius:12px;box-shadow:0 5px 20px #0002}
+#details h2{color:#075b91;margin-bottom:15px}
+#details h3{color:#075b91;margin-top:20px}
+#details p{margin:10px 0}
+#details ul{padding-left:25px}
+.tutorial{background:#e8f4ff}
+form{max-width:650px;margin:auto;background:white;padding:25px;border-radius:12px}
+input,textarea{width:100%;padding:13px;margin:10px 0;border:1px solid #ccc;border-radius:6px}
+footer{background:#071b35;color:white;text-align:center;padding:30px}
+@media(max-width:600px){
+.hero h1{font-size:32px}
+header{justify-content:center}
+nav{text-align:center}
+nav a{display:inline-block}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">NEXT TECH WORLD</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#technology">Technology</a>
+<a href="#tutorials">Tutorials</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<h1>Welcome to Next Tech World</h1>
+<p>Explore Technology, Discover Innovation and Learn New Skills.
+Your destination for Computer Knowledge and Modern Technology.</p>
+<a href="#technology"><button class="btn">Explore Technology</button></a>
+</div>
+
+<section id="about">
+<h2 class="heading">About Us</h2>
+<div class="intro">
+<p>Next Tech World is an educational platform that provides knowledge about modern technologies, computer science, programming and digital innovation.</p>
+<p>Our mission is to make technology easy to understand for students, beginners and technology lovers. Explore different topics and improve your technical knowledge.</p>
+</div>
+</section>
+
+<section id="technology">
+<h2 class="heading">Explore Technologies</h2>
+<div class="cards">
+
+<div class="card">
+<h3>Artificial Intelligence</h3>
+<p>Learn how intelligent machines work and how AI is changing the world.</p>
+<button class="btn" onclick="showInfo('ai')">Read More</button>
+</div>
+
+<div class="card">
+<h3>Cyber Security</h3>
+<p>Understand online safety, data protection and digital security.</p>
+<button class="btn" onclick="showInfo('cyber')">Read More</button>
+</div>
+
+<div class="card">
+<h3>Computer Networking</h3>
+<p>Explore computer networks, internet, LAN, WAN and communication.</p>
+<button class="btn" onclick="showInfo('network')">Read More</button>
+</div>
+
+<div class="card">
+<h3>Cloud Computing</h3>
+<p>Learn about cloud storage, online services and cloud technology.</p>
+<button class="btn" onclick="showInfo('cloud')">Read More</button>
+</div>
+
+<div class="card">
+<h3>Internet of Things</h3>
+<p>Discover smart devices connected through the internet.</p>
+<button class="btn" onclick="showInfo('iot')">Read More</button>
+</div>
+
+<div class="card">
+<h3>Blockchain</h3>
+<p>Understand digital records and distributed technology.</p>
+<button class="btn" onclick="showInfo('blockchain')">Read More</button>
+</div>
+
+<div class="card">
+<h3>Robotics</h3>
+<p>Explore robots, automation and intelligent machines.</p>
+<button class="btn" onclick="showInfo('robotics')">Read More</button>
+</div>
+
+<div class="card">
+<h3>Mobile Technology</h3>
+<p>Learn about smartphones, applications and mobile networks.</p>
+<button class="btn" onclick="showInfo('mobile')">Read More</button>
+</div>
+
+</div>
+</section>
+
+<div id="details">
+<h2 id="detailTitle"></h2>
+<div id="detailText"></div>
+<button class="btn" onclick="closeInfo()">Close Information</button>
+</div>
+
+<section class="tutorial" id="tutorials">
+<h2 class="heading">Programming Tutorials</h2>
+<div class="cards">
+<div class="card"><h3>HTML</h3><p>Learn how to create the structure of websites.</p></div>
+<div class="card"><h3>CSS</h3><p>Learn how to design beautiful and responsive websites.</p></div>
+<div class="card"><h3>Java</h3><p>Learn object-oriented programming and software development.</p></div>
+<div class="card"><h3>Python</h3><p>Learn programming for automation, AI and data science.</p></div>
+<div class="card"><h3>C Programming</h3><p>Understand programming basics and problem solving.</p></div>
+<div class="card"><h3>JavaScript</h3><p>Make websites interactive and dynamic.</p></div>
+</div>
+</section>
+
+<section id="articles">
+<h2 class="heading">Why Learn Technology?</h2>
+<div class="cards">
+<div class="card"><h3>Career Growth</h3><p>Technology skills can help students explore different career opportunities.</p></div>
+<div class="card"><h3>Innovation</h3><p>Technology helps people develop new ideas and useful solutions.</p></div>
+<div class="card"><h3>Digital World</h3><p>Digital knowledge helps people understand the modern connected world.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="heading">Contact Us</h2>
+<form onsubmit="sendMessage(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+<button class="btn" type="submit">Submit</button>
+</form>
+</section>
+
+<footer>
+<h3>NEXT TECH WORLD</h3>
+<p>Learn Today. Innovate Tomorrow.</p>
+<p>© 2026 Next Tech World. All Rights Reserved.</p>
+</footer>
+
+<script>
+function showInfo(topic){
+
+var title = document.getElementById("detailTitle");
+var content = document.getElementById("detailText");
+var box = document.getElementById("details");
+
+var data = {
+
+ai: {
+title:"Artificial Intelligence (AI)",
+text:`
+<p>Artificial Intelligence is a branch of computer science that develops machines and software capable of performing tasks that normally require human intelligence.</p>
+<h3>How AI Works</h3>
+<p>AI systems use data, algorithms and machine learning models to identify patterns, understand information and generate predictions or responses.</p>
+<h3>Types of AI</h3>
+<ul><li>Narrow AI performs specific tasks.</li><li>General AI is a theoretical system with broad human-like abilities.</li><li>Super AI is a theoretical concept of intelligence beyond human abilities.</li></ul>
+<h3>Applications of AI</h3>
+<ul><li>Healthcare: Supports analysis of medical information.</li><li>Education: Helps students learn through digital tools.</li><li>Banking: Helps identify unusual transactions.</li><li>Agriculture: Supports crop monitoring.</li><li>Transportation: Used in driver assistance systems.</li></ul>
+<h3>Advantages</h3>
+<ul><li>Automates repetitive tasks.</li><li>Processes large amounts of data.</li><li>Supports decision making.</li><li>Can improve efficiency.</li></ul>
+<h3>Challenges</h3>
+<p>AI can make mistakes, create privacy concerns and require careful human supervision.</p>
+<h3>Conclusion</h3>
+<p>AI is transforming many industries and is an important part of modern technology.</p>`
+},
+
+cyber: {
+title:"Cyber Security",
+text:`
+<p>Cyber Security is the practice of protecting computers, networks, applications and digital information from unauthorized access and online threats.</p>
+<h3>Importance</h3>
+<p>People use the internet for banking, shopping, education and communication. Cyber security helps protect their personal and financial information.</p>
+<h3>Common Cyber Threats</h3>
+<ul><li>Phishing: Fake messages and websites.</li><li>Malware: Harmful software.</li><li>Ransomware: Software that can lock access to files.</li><li>Identity theft: Misuse of personal information.</li></ul>
+<h3>Types of Cyber Security</h3>
+<ul><li>Network Security.</li><li>Application Security.</li><li>Information Security.</li><li>Cloud Security.</li></ul>
+<h3>Safety Tips</h3>
+<ul><li>Use strong passwords.</li><li>Enable two-factor authentication.</li><li>Never share OTPs.</li><li>Avoid suspicious links.</li><li>Keep devices updated.</li></ul>
+<h3>Career Opportunities</h3>
+<p>Security Analyst, Security Engineer and Network Security Specialist are examples of careers in this field.</p>
+<h3>Conclusion</h3>
+<p>Cyber security is essential for protecting information and maintaining privacy in the digital world.</p>`
+},
+
+network: {
+title:"Computer Networking",
+text:`
+<p>Computer Networking is the process of connecting computers and other devices to share information, files and resources.</p>
+<h3>Types of Networks</h3>
+<ul><li>PAN: Personal Area Network.</li><li>LAN: Local Area Network.</li><li>MAN: Metropolitan Area Network.</li><li>WAN: Wide Area Network.</li></ul>
+<h3>Network Devices</h3>
+<ul><li>Router connects different networks.</li><li>Switch connects devices in a local network.</li><li>Server provides services to other computers.</li><li>Modem helps connect to an internet service.</li></ul>
+<h3>Network Topologies</h3>
+<ul><li>Star Topology.</li><li>Bus Topology.</li><li>Ring Topology.</li><li>Mesh Topology.</li></ul>
+<h3>Protocols</h3>
+<p>TCP, IP, HTTP, HTTPS and DNS are important protocols used in computer communication.</p>
+<h3>Advantages</h3>
+<ul><li>Resource sharing.</li><li>Fast communication.</li><li>File sharing.</li><li>Internet connectivity.</li></ul>
+<h3>Conclusion</h3>
+<p>Networking is important for communication, education, businesses and the internet.</p>`
+},
+
+cloud: {
+title:"Cloud Computing",
+text:`
+<p>Cloud Computing is the delivery of computing services such as storage, servers, databases and software through the internet.</p>
+<h3>Service Models</h3>
+<ul><li>IaaS: Infrastructure as a Service.</li><li>PaaS: Platform as a Service.</li><li>SaaS: Software as a Service.</li></ul>
+<h3>Deployment Models</h3>
+<ul><li>Public Cloud.</li><li>Private Cloud.</li><li>Hybrid Cloud.</li></ul>
+<h3>Applications</h3>
+<ul><li>Online file storage.</li><li>Website hosting.</li><li>Online education.</li><li>Business applications.</li><li>Data backup.</li></ul>
+<h3>Advantages</h3>
+<ul><li>Access files from different locations.</li><li>Flexible storage.</li><li>Supports collaboration.</li><li>Reduces the need to maintain personal servers.</li></ul>
+<h3>Limitations</h3>
+<p>Cloud services depend on internet access. Security, privacy and service costs should also be considered.</p>
+<h3>Conclusion</h3>
+<p>Cloud computing makes it easier to store and access information online.</p>`
+},
+
+iot: {
+title:"Internet of Things (IoT)",
+text:`
+<p>Internet of Things is a technology that connects physical devices to the internet so that they can collect and exchange information.</p>
+<h3>Components</h3>
+<ul><li>Sensors collect information.</li><li>Connectivity transfers data.</li><li>Processing analyzes information.</li><li>User interfaces display results.</li></ul>
+<h3>Applications</h3>
+<ul><li>Smart homes.</li><li>Smart agriculture.</li><li>Health monitoring.</li><li>Industrial automation.</li><li>Smart cities.</li></ul>
+<h3>Advantages</h3>
+<p>IoT supports automation, monitoring and efficient use of resources.</p>
+<h3>Challenges</h3>
+<p>Privacy, security and reliable connectivity are important challenges.</p>
+<h3>Conclusion</h3>
+<p>IoT connects the physical and digital worlds through smart devices.</p>`
+},
+
+blockchain: {
+title:"Blockchain Technology",
+text:`
+<p>Blockchain is a digital record system in which information is stored in connected blocks and shared across a distributed network.</p>
+<h3>Features</h3>
+<ul><li>Distributed records.</li><li>Cryptographic security.</li><li>Transparency in supported networks.</li><li>Confirmed records are difficult to change.</li></ul>
+<h3>Applications</h3>
+<ul><li>Digital asset systems.</li><li>Supply chain tracking.</li><li>Record management.</li><li>Smart contracts.</li></ul>
+<h3>Advantages</h3>
+<p>Blockchain can support transparent record keeping and reduce dependence on a single central database.</p>
+<h3>Limitations</h3>
+<p>Some systems face scalability, energy use and regulatory challenges.</p>
+<h3>Conclusion</h3>
+<p>Blockchain is an emerging technology used in distributed digital record systems.</p>`
+},
+
+robotics: {
+title:"Robotics Technology",
+text:`
+<p>Robotics is a branch of technology that deals with designing, building and operating robots.</p>
+<h3>Main Components</h3>
+<ul><li>Sensors collect information.</li><li>Controllers process information.</li><li>Actuators help robots move.</li><li>Power supplies provide energy.</li></ul>
+<h3>Types of Robots</h3>
+<ul><li>Industrial robots.</li><li>Medical robots.</li><li>Service robots.</li><li>Educational robots.</li><li>Mobile robots.</li></ul>
+<h3>Applications</h3>
+<p>Robots are used in manufacturing, healthcare, agriculture, education and space exploration.</p>
+<h3>Advantages</h3>
+<p>Robots can support repetitive tasks, precision and automation.</p>
+<h3>Conclusion</h3>
+<p>Robotics combines engineering, electronics and programming to develop useful machines.</p>`
+},
+
+mobile: {
+title:"Mobile Technology",
+text:`
+<p>Mobile Technology allows people to communicate and access digital services using portable devices such as smartphones and tablets.</p>
+<h3>Main Components</h3>
+<ul><li>Hardware: Processor, screen, camera and battery.</li><li>Operating Systems: Android and iOS.</li><li>Applications: Software used for different tasks.</li><li>Wireless Networks: Wi-Fi and mobile networks.</li></ul>
+<h3>Applications</h3>
+<ul><li>Online learning.</li><li>Digital payments.</li><li>Video calling.</li><li>Navigation.</li><li>Entertainment.</li></ul>
+<h3>Advantages</h3>
+<p>Mobile technology provides portability, communication and easy access to information.</p>
+<h3>Challenges</h3>
+<p>Privacy, device security and responsible usage are important considerations.</p>
+<h3>Conclusion</h3>
+<p>Mobile technology is an important part of modern digital life.</p>`
+}
+
+};
+
+if(!data[topic]){
+alert("Information not found");
+return;
+}
+
+title.textContent = data[topic].title;
+content.innerHTML = data[topic].text;
+box.style.display = "block";
+box.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function closeInfo(){
+document.getElementById("details").style.display = "none";
+document.getElementById("technology").scrollIntoView({behavior:"smooth"});
+}
+
+function sendMessage(event){
+event.preventDefault();
+alert("Thank you! Your message has been received.");
+event.target.reset();
+}
+</script>
+
+</body>
+</html>
